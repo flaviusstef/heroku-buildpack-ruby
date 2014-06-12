@@ -19,7 +19,8 @@ end
 
 $GRAPHVIZ_BINARY="https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz"
 $GRAPHVIZ_VENDOR="mfenniak/graphviz"
+h = ENV['HOME']
 puts "Installing graphviz package"
-Dir.mkdir "$1/$GRAPHVIZ_VENDOR"
-`curl $GRAPHVIZ_BINARY -o - | tar -xz -C $1/$GRAPHVIZ_VENDOR -f -`
-ENV['PATH']="$HOME/mfenniak/graphviz/bin:"+ENV['PATH']
+Dir.mkdir "#{h}/$GRAPHVIZ_VENDOR"
+`curl $GRAPHVIZ_BINARY -o - | tar -xz -C #{h}/$GRAPHVIZ_VENDOR -f -`
+ENV['PATH']="#{h}/mfenniak/graphviz/bin:"+ENV['PATH']
