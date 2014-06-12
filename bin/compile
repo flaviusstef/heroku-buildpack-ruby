@@ -19,7 +19,7 @@ end
 
 $GRAPHVIZ_BINARY="https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz"
 $GRAPHVIZ_VENDOR="mfenniak/graphviz"
-pack.topic("Installing graphviz package")
+puts "Installing graphviz package"
 Dir.mkdir $1/$GRAPHVIZ_VENDOR
 `curl $GRAPHVIZ_BINARY -o - | tar -xz -C $1/$GRAPHVIZ_VENDOR -f -`
 ENV['PATH']="$HOME/mfenniak/graphviz/bin:"+ENV['PATH']
