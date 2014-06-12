@@ -18,4 +18,4 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
 end
 
 puts "Installing graphviz package"
-`curl https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz -o - | tar -xz -C /app/bin -f -`
+`curl https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz -o - | tar -xz -C $1/app/bin -f -`
