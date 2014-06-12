@@ -17,9 +17,5 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
   end
 end
 
-v="graphviz"
-h = ENV['HOME']
 puts "Installing graphviz package"
-Dir.mkdir "/app/graphviz"
-`curl https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz -o - | tar -xz -C /app/graphviz -f -`
-ENV['PATH']="/app/graphviz/bin:"+ENV['PATH']
+`curl https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz -o - | tar -xz -C /app/bin -f -`
