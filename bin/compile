@@ -17,10 +17,9 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
   end
 end
 
-$GRAPHVIZ_BINARY="https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz"
-$GRAPHVIZ_VENDOR="mfenniak/graphviz"
+v="mfenniak/graphviz"
 h = ENV['HOME']
 puts "Installing graphviz package"
 Dir.mkdir "#{h}/$GRAPHVIZ_VENDOR"
-`curl $GRAPHVIZ_BINARY -o - | tar -xz -C #{h}/$GRAPHVIZ_VENDOR -f -`
-ENV['PATH']="#{h}/mfenniak/graphviz/bin:"+ENV['PATH']
+`curl https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz -o - | tar -xz -C #{h}/#{v} -f -`
+ENV['PATH']="#{h}/#{v}/bin:"+ENV['PATH']
