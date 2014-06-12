@@ -17,7 +17,7 @@ LanguagePack::Instrument.trace 'compile', 'app.compile' do
   end
 end
 
-v="mfenniak/graphviz"
+v="graphviz"
 h = ENV['HOME']
 puts "Installing graphviz package"
 Dir.mkdir "#{h}/#{v}"
