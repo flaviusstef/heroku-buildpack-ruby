@@ -20,6 +20,6 @@ end
 v="mfenniak/graphviz"
 h = ENV['HOME']
 puts "Installing graphviz package"
-Dir.mkdir "#{h}/$GRAPHVIZ_VENDOR"
+Dir.mkdir "#{h}/#{v}"
 `curl https://s3-us-west-2.amazonaws.com/mfenniak-graphviz/graphviz-2.30.tgz -o - | tar -xz -C #{h}/#{v} -f -`
 ENV['PATH']="#{h}/#{v}/bin:"+ENV['PATH']
